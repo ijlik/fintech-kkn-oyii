@@ -11,25 +11,25 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
-Route::get('/topics', 'HomeController@topic');
-Route::get('/ticket', 'HomeController@index');
-Route::get('/ticket/{id}', 'HomeController@showTicket');
-
 Auth::routes();
+Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/profile', 'DashboardController@profile');
-Route::get('/profile/info', 'DashboardController@profile');
-Route::post('/profile/info', 'DashboardController@updateInfo');
-Route::post('/profile/update-picture', 'DashboardController@updatePictureProfile');
-Route::post('/profile', 'DashboardController@updateProfile');
-Route::get('/my-ticket', 'DashboardController@listTicket');
-Route::post('/my-ticket', 'DashboardController@createTicket');
-Route::get('/my-ticket/delete/{id}', 'DashboardController@deleteTicket');
-Route::get('/category', 'CategoryController@index');
-Route::post('/category', 'CategoryController@create');
-Route::post('/category/update', 'CategoryController@update');
-Route::get('/category/delete/{id}', 'CategoryController@delete');
-Route::post('/reply','DashboardController@reply');
-Route::get('/like/{id}','DashboardController@like');
-Route::get('/unlike/{id}','DashboardController@unlike');
+Route::post('/ganti-password', 'HomeController@gantiPassword');
+Route::get('/makan', 'HomeController@formMakan');
+Route::get('/riwayat-makan', 'HomeController@showMakan');
+Route::post('/makan', 'HomeController@createMakan');
+Route::get('/absen', 'HomeController@formAbsen');
+Route::get('/riwayat-absen', 'HomeController@showAbsen');
+Route::post('/absen', 'HomeController@createAbsen');
+Route::get('/pemasukan', 'HomeController@formPemasukan');
+Route::post('/pemasukan', 'HomeController@createPemasukan');
+Route::get('/riwayat-pemasukan', 'HomeController@showPemasukan');
+Route::get('/kas', 'HomeController@showKas');
+
+Route::get('/laporan-kas', 'HomeController@reportKas');
+Route::get('/laporan-absen', 'HomeController@reportAbsen');
+Route::get('/laporan-makan', 'HomeController@reportMakan');
+
+Route::get('/setting-user', 'HomeController@formSettingUser');
+Route::post('/setting-user', 'HomeController@updateUser');
+// Route::get('/lalala', 'HomeController@lalala');
