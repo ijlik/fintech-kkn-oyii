@@ -1,4 +1,5 @@
-##Fintech KKN App. Aplikasi Manajemen Absensi dan Keuangan KKN berbasis Website.
+# Fintech KKN Oyii
+## Aplikasi Manajemen Absensi dan Keuangan KKN berbasis Website.
 
 Aplikasi ini dibuat untuk mempermudah pengelolaan uang kas, pengelolaan anggaran makan harian, pengelolaan absensi dan pengelolaan uang keluar masuk.
 
